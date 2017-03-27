@@ -55,7 +55,7 @@
                       <option value="worki azbest UK">Worki na azbest - Standard UK</option>
                    </select>
 
-                   <h3>Wymiary:<h3>
+                   <h3>Wymiary:</h3>
                      <label for="szerokosc">szerokość</label>
                      <input type="text" name="szerokosc" value="">
 
