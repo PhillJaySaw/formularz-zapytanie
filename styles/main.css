@@ -1,0 +1,804 @@
+/* ========== FONTS ==========
+
+font-family: 'Oswald', sans-serif;
+font-family: 'Quattrocento Sans', sans-serif;
+
+   ========= COLORS ==========
+
+#0D1B2A
+#1B263B
+#415A77
+#778DA9
+#E0E1DD
+
+*/
+
+
+/* ========== General styles  ========= */
+
+body {
+   /*ont-family: 'Quattrocento Sans', sans-serif;*/
+   overflow-x: hidden;
+}
+
+p, span, ul, select, html, form, input {
+   font-family: 'Helvetica', sans-serif;
+   font-weight: 300;
+}
+
+a:hover {
+
+}
+
+h1 {
+   font-weight: 700;
+   letter-spacing: 2px;
+}
+
+h1, h2, h3 {
+   font-family: 'Oswald', sans-serif;
+}
+
+header h1 {
+   color: #EEE;
+   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+   font-size: 200%;
+   color: #1B263B;
+}
+
+h3 {
+   font-size: 140%;
+   font-weight: 400;
+}
+
+.alert { color: red; }
+
+.underline { text-decoration: underline; }
+
+section {
+   padding-top: 4em;
+   padding-bottom: 8.5em;
+}
+
+button {
+   background: #778DA9;
+   border: none;
+   padding: 10px 30px 10px 30px;
+   border-radius: 5px;
+   color: #E0E1DD;
+}
+
+button:hover {
+   background: #415A77;
+   border: none;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+button,
+input[type="submit"] {
+   outline: none;
+}
+
+.text-box {
+   width: 500px;
+   color: #E0E1DD;
+   font-size: 150%;
+   margin-top: 2em;
+   padding: 1em;
+   padding-bottom: 0.1em;
+   background: rgba(0, 0, 0, 0.5);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+}
+
+main h1 {
+   text-align: center;
+   /*margin-top: 1.5em;*/
+   color: #0D1B2A;
+}
+
+.header-decoration-sqaure {
+   width: 10px;
+   height: 45px;
+   margin-right: .3em;
+}
+
+.header-box {
+   position: absolute;
+   top: 20%;
+   left: 10%;
+}
+
+.header-box h1 {
+   font-size: 450%;
+   color:
+}
+
+#big-bg-baner {
+   background: url('../media/onas_bg720.png') no-repeat;
+   background-size: cover;
+   height: 550px;
+   position: relative;
+}
+
+/* ========== Page Header + nav  ========== */
+
+header {
+   position: relative;
+   width: 100%;
+   height: 500px;
+}
+
+html#home header {
+   position: relative;
+   height:100vh;
+   width: 100%;
+   overflow: hidden;
+}
+
+#welcome-blurp {
+   color: #E0E1DD;
+   font-size: 200%;
+   letter-spacing: 0.2em;
+   margin-top: 1.2em;
+   padding-left: 1em;
+   text-transform: uppercase;
+}
+
+nav.main-nav {
+   background: #415A77;
+   position: fixed;
+   width: 100%;
+   left: 0;
+   top: 0;
+   z-index: 999;
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+   font-size: 110%;
+}
+
+nav.main-nav ul {
+   float: right;
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+   overflow: hidden;
+}
+
+nav.main-nav ul li {
+   display: inline-block;
+   padding: 14px 16px;
+   margin: 0;
+   padding: .5em 3em .5em 0;
+}
+
+nav img {
+   position: absolute;
+   left: 1%;
+   top: 10%;
+   height: 32px;
+   width: auto;
+}
+
+li a {
+   text-decoration: none;
+   color: #E0E1DD;
+}
+
+#videoBlock {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+#videoMessage {
+   position: absolute;
+   left: 10%;
+   top: 50%;
+   transform: translate(0,-50%);
+}
+
+#main-logo {
+   width: 850px;
+   height: auto;
+}
+
+#videoMessage .text-box ul {
+   list-style-image: url('../media/arrow.png');
+}
+
+#videoMessage .text-box li {
+   margin-bottom: 1em;
+}
+
+#videoMessage .text-box li span {
+   padding-left: 10px;
+}
+
+video#bgvid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%); ;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+    filter: brightness(50%);
+}
+
+main h1 {
+   text-align: center;
+   /*margin-top: 1.5em;*/
+   color: #0D1B2A;
+}
+
+.header-decoration-sqaure {
+   width: 10px;
+   height: 45px;
+   margin-right: .3em;
+}
+
+#language {
+   position: absolute;
+   right: 4%;
+   top: 7%;
+}
+
+#language img {
+   width: 50px;
+   height: auto;
+   display: inline-block;
+   transition: 150ms;
+}
+
+#language img[alt="jezyk polski"] {
+   margin-right: 1.5em;
+}
+
+#language img:hover {
+   transform: scale(1.2);
+
+}
+
+#scroll {
+   width: 75px;
+   height: auto;
+   position: absolute;
+   left: 50%;
+   bottom: 4%;
+   transform: translate(-50%, 0);
+}
+
+/* ======== nasza oferta ========= */
+
+#oferty .row {
+   margin-top: 12em;
+}
+
+.oferta-box {
+   background: #EEE;
+   width: 250px;
+   height: 340px;
+   margin: 0 auto;
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-top: 40%;
+   border-radius: 10px;
+   box-shadow: 0 5px 7px 1px rgba(0, 0, 0, 0.2);
+   position: relative;
+   text-align: center;
+}
+
+.oferta-box img {
+   width: 200px;
+   height: auto;
+   border-radius: 999px;
+   position: absolute;
+   left: 50%;
+   top: -25%;
+   transform: translate(-50%);
+   box-shadow: 0 -3px 7px -1px rgba(0, 0, 0, .3);
+}
+
+.oferta-box h2 {
+   text-align: center;
+   color: #415A77;
+}
+
+.oferta-box button {
+   margin: 0 auto;
+   position: absolute;
+   top: 84%;
+   left: 50%;
+   transform: translate(-50%, 0);
+}
+
+.oferta-box p {
+   text-align: left;
+}
+
+.oferta-box ul {
+   list-style: none;
+}
+
+/* ========= O nas ========= */
+
+section#o-nas {
+   background: url('../media/onas_bg720.png') no-repeat;
+   background-size: cover;
+   position: relative;
+}
+
+#o-nas h1 {
+   color: #E0E1DD;
+
+}
+
+/*
+#o-nas .text-box {
+   max-width: 37%;
+   min-width: 30%;
+   position: absolute;
+   left: 8%;
+   top: 50%;
+   transform: translate(0, -50%);
+   padding: 1.5em;
+   letter-spacing: .08em;
+   display: inline-block;
+   text-align: left;
+   margin: 0;
+}
+*/
+
+/*
+#o-nas img[src="media/crew.jpg"] {
+   max-width: 37%;
+   height: auto;
+   position: absolute;
+   right: 8%;
+   top: 50%;
+   transform: translate(0, -50%);
+}
+*/
+
+#o-nas button {
+   font-size: 18px;
+}
+
+#o-nas .text-box {
+   letter-spacing: .08em;
+   text-align: left;
+   margin: 0;
+   width: 100%;
+   font-size: 130%;
+}
+
+img[src="media/crew.jpg"] {
+   width: 500px;
+   position: absolute;
+   left: 60%;
+   top: 50%;
+   transform: translate(0, -50%);
+}
+
+#o-nas .container {
+   margin-top: 6em;
+   max-width: 1400px;
+}
+
+
+/* ========= Footer ========= */
+
+footer {
+   height: 50px;
+   background: #415A77;
+   width: 100%;
+   color: #E0E1DD;
+   position: relative;
+}
+
+span.copy {
+   position: absolute;
+   left: 7%;
+   top: 50%;
+   transform: translate(0%, -50%);
+}
+
+nav.footer-nav {
+   position: absolute;
+   right: 7%;
+   top: 50%;
+   transform: translate(0%, -50%);
+}
+
+footer a {
+   text-decoration: none;
+   color: #E0E1DD;
+   padding: 0 1em;
+   border-left: 1px solid #E0E1DD;
+}
+
+/* ========== PODSTRONA OFERTA ========= */
+
+
+html#oferta header {
+   background: url("../media/folia.png") no-repeat;
+   background-size: cover;
+   height: 500px;
+}
+
+section#category-selector {
+   margin-top: 4em;
+   margin-bottom: 4em;
+}
+
+section#category-selector .category {
+   text-align: center;
+   background-color: #eee;
+   border-radius: 10px;
+   padding-top: 2em;
+   padding-bottom: 1em;
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+section#category-selector .category img {
+   border-radius: 999px;
+   width: 210px;
+   height: auto;
+   box-shadow: 0px 10px 10px -5px rgba(0,0,0,.4);
+   transition: all ease-in-out 200ms;
+   cursor: pointer;
+}
+
+section#category-selector .category img:hover {
+   box-shadow: 0px 30px 20px -20px rgba(0,0,0,.2);
+   transform: translate(0px, -10px) scale(1.1)
+}
+
+html#oferta .row{
+   margin-bottom: 3em;
+}
+
+section#category-selector h2 {
+   font-size: 220%;
+   margin-top: .5em;
+   background: #eee;
+   border-radius: 10px;
+   padding-top: .2em;
+   padding-bottom: .2em;
+   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+html#oferta main {
+   padding: 5em 0;
+}
+
+/* ========== PODSTRONA PRODUKTOW ========= */
+
+html#prod header {
+   background: url("../media/folia.png") no-repeat;
+   background-size: cover;
+   height: 300px;
+}
+
+html#prod main {
+   padding: 5em 0;
+}
+
+html#prod .row{
+   margin-bottom: 3em;
+}
+
+div.product-box {
+   background: #eee;
+   border-radius: 10px;
+   min-height: 200px;
+   padding: 0;
+   overflow: hidden;
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+   margin-bottom: 4em;
+}
+
+div.product-img {
+   width: 30%;
+   height: 210px;
+   float: left;
+   background: url("../media/nopic.png") no-repeat;
+   background-size: cover;
+   background-position: center;
+   overflow: hidden;
+   /*border-right: 3px solid #444;
+   border-bottom: 3px solid #444;*/
+   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.worsmiec .product-img { background: url("../media/workismiec.png") no-repeat center; }
+.worspec .product-img { background: url("../media/asbest-grupa.jpg") no-repeat center; }
+.folia-ogien .product-img { background: url("../media/foliepe.png") no-repeat center; }
+.folia-rekaw .product-img { background: url("../media/rekaw.png") no-repeat center; }
+.folia-termo .product-img { background: url("../media/termokurczliwa.png") no-repeat center; }
+.folia-tasma .product-img { background: url("../media/tasma.png") no-repeat center; }
+.folia-ochr .product-img { background: url("../media/ochronna.png") no-repeat center; }
+.folia-bar .product-img { background: url("../media/barierowa.png") no-repeat center; }
+.folia-bud .product-img { background: url("../media/budowlana.png") no-repeat center; }
+.folia-czarno .product-img { background: url("../media/czarno_biala.jpg") no-repeat center; }
+.arkusze-male .product-img { background: url("../media/malerolki.png") no-repeat center; }
+.arkusze-perferowane .product-img { background: url("../media/perferowane.jpg") no-repeat center; }
+.arkusze-luzne .product-img { background: url("../media/luzne.png") no-repeat center; }
+
+
+div.product-text {
+   padding: 1.5em;
+   width: 63%;
+   float: right;
+}
+
+div.product-text p {
+   width: 80%;
+   margin-bottom: .8em;
+}
+
+div.product-box button {
+   float: right;
+   clear: both;
+   margin-right: 3em;
+   margin-bottom: 1em;
+}
+
+.more-info {
+   clear: both;
+   margin-bottom: 2em;
+   padding-left: 5em;
+   padding-right: 5em;
+   font-family: 'Helvetica', sans-serif;
+}
+
+.more-info table {
+   margin: 0 auto;
+   margin-bottom: 5em;
+   font-family: 'Helvetica', sans-serif;
+   width: 100%;
+}
+
+.more-info caption {
+   font-size: 150%;
+   border-bottom: 1px solid black;
+}
+
+/* ================= KALKULATOR ================= */
+
+#kalkulator header {
+   background: url("../media/folia.png") no-repeat;
+   background-size: cover;
+}
+
+.instrukcja {
+   margin-top: 3em;
+}
+
+#calcForm {
+   font-family: 'Helvtica'. sans-serif;
+   background-color: #ddd;
+   padding: 3em;
+   padding-bottom: 2em;
+   width: 900px;
+   margin: 5em auto 25em auto;
+   border-radius: 7px;
+}
+
+.wynik {
+   font-family: 'Helvetica', sans-serif;
+   margin-top: 1.7em;
+}
+
+#calcForm input[type="text"] {
+   border: none;
+   padding: 3px 5px;
+   display: block;
+   margin-bottom: 1em;
+}
+
+#calcForm input:disabled {
+   background: #aaa;
+   border: solid #777 1px;
+}
+
+#calcButton {
+   padding: .5em 1em;
+   background: #EEE;
+   border: solid #333 1px;
+   box-shadow: none;
+   font-size: 100%;
+   display: block;
+   color: #333;
+   font-weight: 700;
+}
+
+#calcForm label {
+   font-size: 110%;
+   font-family: 'Helvetica', sans-serif;
+   font-weight: 300;
+}
+
+#calcButton:hover { background: #AAA; }
+
+#calcForm span {
+   display: inline-block;
+   margin-right: 1em;
+}
+
+#selectType {
+   display: block;
+   margin-bottom: 2em;
+   border-radius: 0;
+   font-size: 110%;
+}
+
+.error {
+   color: red;
+}
+
+#kalkulator footer {
+   /*position: absolute;
+   top: 100%;
+   transform: translate(0, -100%);*/
+}
+
+/* ========== O NAS ========= */
+
+#onas header {
+   background: url("../media/folia.png") no-repeat;
+   background-size: cover;
+   height: 200px;
+}
+
+#onas section {
+   padding: 2em 2em;
+}
+
+#onas h1 {
+   text-align: left;
+}
+
+.site-title {
+   position: absolute;
+   left: 50%;
+   top: 45%;
+   transform: translate(-50%,0);
+   font-size: 400%;
+}
+
+#onas section p {
+   margin-top: 2em;
+   font-size: 110%;
+}
+
+#onas .wiecej h1 {
+   text-align: center;
+   color: #EEE;
+   font-size: 400%;
+}
+
+#onas .wiecej {
+   padding-top: 4em;
+   padding-bottom: 4em;
+   height: auto;
+}
+
+.onas-last {
+   text-align: center;
+}
+
+.onas-last button {
+   height: 50px;
+   width: 230px;
+   border-radius: 40px;
+   margin: 3em 0;
+   font-size: 120%;
+}
+
+.kim-jestesmy {
+   margin-top: 5em;
+   margin-bottom: 5em;
+}
+
+.budynek {
+   width: 500px;
+   height: auto;
+   position: absolute;
+   top: 50%;
+   left: 55%;
+   transform: translate(0, -50%);
+}
+
+
+/* ========== KONTAKT ========= */
+
+#kontakt header {
+   background: url("../media/folia.png") no-repeat;
+   background-size: cover;
+}
+
+#kontakt section {
+   padding-top: 2em;
+   padding-bottom: 2em;
+}
+
+#kontakt .kontakt {
+   text-align: center;
+   font-size: 150%;
+}
+
+section.map {
+   padding-top: 0;
+}
+
+#kontakt img.icon {
+   margin-right: 1em;
+}
+
+.kontakt-info {
+   margin-top: 2em;
+}
+
+.map {
+   margin-bottom: 2em;
+}
+
+#contact-formular {
+   width: 60%;
+   display: inline;
+}
+
+#contact-form form {
+   margin: 0 auto;
+   font-size: 140%;
+   width: 60%;
+}
+
+#contact-form input {
+   width: 300px;
+}
+
+#contact-form input[type="radio"] {
+   width: 10px;
+}
+
+/* ========== Zapyatnie odp rodukt ========== */
+
+label {
+   font-weight: 300;
+}
+
+/* ========== WARUNKI SPRZEDAŻY ========= */
+
+html#warunki header {
+   background: url("../media/folia.png") no-repeat;
+   background-size: cover;
+   height: 500px;
+}
+
+.warunki-sprzedazy h2, .warunki-sprzedazy h3 {
+   text-align: center;
+}
+
+/* ========== MEDIA QUERIES ========= */
+
+#temp {
+   height: 300px;
+}

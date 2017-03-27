@@ -1,0 +1,14 @@
+#contact-form input[type="radio"],
+#contact-form input[type="checkbox"] {
+   width: 18px;
+}
+
+label {
+   font-family: "helvetica", sans-serif;
+   font-weight: 200;
+   font-size: 80 %;
+}
+
+#zapytanie-form {
+   width: 900px;
+}
