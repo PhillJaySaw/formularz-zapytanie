@@ -781,8 +781,10 @@ section.map {
 
 /* ========== Zapyatnie odp rodukt ========== */
 
-label {
-   font-weight: 300;
+#zapytanie-form {
+   width: 70%;
+   font-size: 110%;
+   margin: 0 auto;
 }
 
 /* ========== WARUNKI SPRZEDAŻY ========= */

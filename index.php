@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="kontakt" class="zapytanie-o-produkt">
+<html id="kontakt">
    <head>
       <meta charset="utf-8">
       <title>D.A. Film - Arkusze i płachty PE </title>
@@ -32,22 +32,25 @@
          </div>
       </header>
       <main class="container">
-         <section id="contact-form">
+         <section id="zapytanie-form">
 
             <?php
                $action=$_REQUEST['action'];
-               if ($action=="")    /* display the contact form */
+               if ($action=="")
                    {
                    ?>
                    <form id="zapytanie-form" class="" action="" method="POST" enctype="multipart/form-data">
                    <input type="hidden" name="action" value="submit">
-                   Imię i Nazwisko / Firma:<br>
-                   <input name="name" type="text" value="" size="50"/><br>
-                   Twój email:<br>
-                   <input name="email" type="text" value="" size="50"/><br>
+                   <span class="error">*</span>Imię i Nazwisko / Firma:<br>
+                   <input name="name" type="text" value="" size="50" required><br>
+                   Numver kontaktowy:<br>
+                   <input name="numer" type="text" value="" size="50"><br>
+                   <span class="error">*</span>Twój email:<br>
+                   <input name="email" type="email" value="" size="50" required><br>
 
                    <h3>Wybierz produkt którym jesteś zainteresowany</h3>
                    <select class="product-select" name="nazwa-produktu">
+                      <option value="">wybierz rodzaj worków</option>
                       <option value="worki śmieciowe">Worki śmieciowe</option>
                       <option value="worki azbest UE niebieskie">Worki na azbest - Standard UE, niebieskie, drukowane</option>
                       <option value="worki azbest UE bezbarwne druk">Worki na azbest - Standard UE, bezbarwne, drukowane</option>
@@ -84,11 +87,11 @@
                      </select>
 
                      <h3>Dodatki</h3>
-                     <input type="checkbox" name="dodatki" value="uv"> UV <br>
-                     <input type="checkbox" name="dodatki" value="antislip"> Anti Slip <br>
-                     <input type="checkbox" name="dodatki" value="antiblock"> Anti block <br>
-                     <input type="checkbox" name="dodatki" value="roughsurface"> Rough surface <br>
-                     <input type="checkbox" name="dodatki" value="antirust"> Anti rust <br>
+                     <input type="checkbox" name="check_list[]" value="uv"> UV <br>
+                     <input type="checkbox" name="check_list[]" value="antislip"> Anti Slip <br>
+                     <input type="checkbox" name="check_list[]" value="antiblock"> Anti block <br>
+                     <input type="checkbox" name="check_list[]" value="roughsurface"> Rough surface <br>
+                     <input type="checkbox" name="check_list[]" value="antirust"> Anti rust <br>
 
 
 
@@ -107,6 +110,7 @@
                    {
                    /* dane nadawcy */
                    $name=$_REQUEST['name'];
+                   $numer=$_REQUEST['numer'];
                    $email=$_REQUEST['email'];
 
                    /* Dane produktu */
@@ -118,6 +122,13 @@
                    $kolor=$_REQUEST['kolor'];
                    $ilosc=$_REQUEST['ilosc'];
                    $pakowanie=$_REQUEST['sposob-pakowania'];
+                   $dodatki = "";
+
+                   if(!empty($_REQUEST['check_list'])) {
+                     foreach ($_REQUEST['check_list'] as $check) {
+                        $dodatki .= $check.', ';
+                     }
+                   }
 
 
                    $message='<strong>'.$nazwaProduktu.'</strong><br>'.
@@ -133,7 +144,7 @@
 
 
 
-                   if (($name=="")||($email=="")||($message==""))
+                   if (($name=="")||($email==""))
                        {
                		echo "Wszystkie pola są wymagane, prosimy wypełnić <a href=\"\">formularz</a> ponownie.";
                	    }
@@ -141,7 +152,7 @@
                	    $from="Od: $name<$email>\r\nReturn-path: $email";
                        $subject="Wiadomość wysłana za pomocą formularza kontaktowego";
                		   mail("philliplawniczak@gmail.com", $subject, $message, $from);
-               		echo $message;
+               		echo $message.'<br>';
                	    }
                    }
                ?>
